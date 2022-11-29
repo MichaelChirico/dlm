@@ -2459,7 +2459,7 @@ SEXP dlmSmooth0(SEXP mod, SEXP big)
 
     SEXP val, smoothR, US_R, DS_R;
     int t, i, j, k, p, n, nPlus, la_m, la_n, *la_iwork, la_lwork, la_info=0;
-    double *sm, *smooth, *DS, *US, *sGG, *DC, *UC, *DR, *UR, *Ht, *C, *Rinv, 
+    double *sm, *smooth, *DS, *US, *sGG, *DC, *UC, *Ht, *C, *Rinv, 
 	*sqrtWinv, tmp, tmp1,
 	*tmpMat, *dPointer, *dptr, *dPointer1, *dptr1, *dptr2,
 	*la_s, *la_u, *la_vt, *la_work, dBig = REAL(big)[0], eps;
@@ -2764,9 +2764,8 @@ SEXP dlmSmooth(SEXP mod, SEXP tvGG, SEXP tvW, SEXP big)
 
     SEXP val, smoothR, US_R, DS_R;
     int t, i, j, k, p, n, nPlus, la_m, la_n, *la_iwork, la_lwork, la_info=0,
-	stvGG=INTEGER(tvGG)[0], stvW=INTEGER(tvW)[0], *sJGG, *sJW, nrJGG, nrJW,
-	nr;
-    double *sm, *smooth, *DS, *US, *sGG, *DC, *UC, *DR, *UR, *Ht, *C, *Rinv, 
+	stvGG=INTEGER(tvGG)[0], stvW=INTEGER(tvW)[0], *sJGG, *sJW, nrJGG, nrJW;
+    double *sm, *smooth, *DS, *US, *sGG, *DC, *UC, *Ht, *C, *Rinv, 
 	*sW, *sqrtWinv, *sX, tmp, tmp1,
 	*tmpMat, *dPointer, *dptr, *dPointer1, *dptr1, *dptr2,
 	*la_s, *la_u, *la_vt, *la_work, dBig = REAL(big)[0], eps;
