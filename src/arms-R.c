@@ -312,7 +312,7 @@ void invert(double prob, ENVELOPE *env, POINT *p)
 /* *p      : a working POINT to hold the sampled value */
 
 {
-  double u,xl,xr,yl,yr,eyl,eyr,prop,z;
+  double u,xl=0,xr=0,yl,yr,eyl,eyr,prop;
   POINT *q;
 
   /* find rightmost point in envelope */
